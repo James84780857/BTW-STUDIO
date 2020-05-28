@@ -1,0 +1,456 @@
+@charset "UTF-8";
+* {
+  font-family: "EB Garamond", "微軟正黑體";
+  position: relative;
+}
+
+nav.navbar.navbar-expand-md.mb-4.fixed-top a.navbar-brand.ml-2 {
+  color: #FFDFD8;
+  transition: 0.5s;
+}
+nav.navbar.navbar-expand-md.mb-4.fixed-top a.navbar-brand.ml-2:hover {
+  opacity: 0.5;
+}
+
+ul.navbar-nav.ml-auto.mr-3 li.nav-item .ins {
+  width: 25px;
+  margin: 5px;
+}
+ul.navbar-nav.ml-auto.mr-3 li.nav-item .ins:hover {
+  cursor: pointer;
+}
+ul.navbar-nav.ml-auto.mr-3 li.nav-item a.nav-link {
+  color: #FFDFD8;
+  transition: 0.5s;
+}
+ul.navbar-nav.ml-auto.mr-3 li.nav-item a.nav-link:hover {
+  opacity: 0.5;
+}
+
+section {
+  padding: 20px 0px;
+  position: relative;
+}
+
+html, body {
+  height: 1000px;
+}
+
+.NavMove {
+  background-color: rgba(128, 128, 128, 0.5);
+  transition: 0.5s;
+}
+
+#headerfirst:before, #sectionIntro:before, #sectionSpan:before, #sectionSpan:before, section#AboutEurope:before, section#SpanPortugal:before {
+  content: "";
+  background-color: black;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#headerfirst:after, #sectionIntro:after, #sectionSpan:after, #sectionSpan:after, section#AboutEurope:after, section#SpanPortugal:after {
+  content: "";
+  background-image: url("https://i.imgur.com/POZWxTx.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+#headerfirst .container, #sectionIntro .container, #sectionSpan .container, #sectionSpan .container, section#AboutEurope .container, section#SpanPortugal .container {
+  padding: 250px 0px;
+  color: white;
+}
+#headerfirst .container .explore, #sectionIntro .container .explore, #sectionSpan .container .explore, #sectionSpan .container .explore, section#AboutEurope .container .explore, section#SpanPortugal .container .explore {
+  opacity: 0;
+}
+#headerfirst .container .ex, #sectionIntro .container .ex, #sectionSpan .container .ex, #sectionSpan .container .ex, section#AboutEurope .container .ex, section#SpanPortugal .container .ex {
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  cursor: pointer;
+  color: #F8F1FF;
+  transition: 0.3s;
+}
+#headerfirst .container .ex:hover, #sectionIntro .container .ex:hover, #sectionSpan .container .ex:hover, #sectionSpan .container .ex:hover, section#AboutEurope .container .ex:hover, section#SpanPortugal .container .ex:hover {
+  color: #EADDDB;
+}
+#headerfirst .container .ex:after, #sectionIntro .container .ex:after, #sectionSpan .container .ex:after, #sectionSpan .container .ex:after, section#AboutEurope .container .ex:after, section#SpanPortugal .container .ex:after {
+  content: "∇";
+  display: block;
+  text-align: center;
+  animation: downward 0.5s infinite;
+  cursor: pointer;
+}
+@keyframes downward {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+#headerfirst .container .text_area, #sectionIntro .container .text_area, #sectionSpan .container .text_area, #sectionSpan .container .text_area, section#AboutEurope .container .text_area, section#SpanPortugal .container .text_area {
+  padding-left: 40px;
+}
+#headerfirst .container .text_area .head, #sectionIntro .container .text_area .head, #sectionSpan .container .text_area .head, #sectionSpan .container .text_area .head, section#AboutEurope .container .text_area .head, section#SpanPortugal .container .text_area .head {
+  font-size: 70px;
+}
+#headerfirst .container .text_area .text, #sectionIntro .container .text_area .text, #sectionSpan .container .text_area .text, #sectionSpan .container .text_area .text, section#AboutEurope .container .text_area .text, section#SpanPortugal .container .text_area .text {
+  font-size: 30px;
+}
+
+#sectionIntro {
+  background-color: #383639;
+  color: white;
+}
+#sectionIntro .personalpic {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  margin-right: 80px;
+}
+#sectionIntro .col-sm-12 .about {
+  padding: 10px 10px;
+  font-weight: 300;
+}
+#sectionIntro .col-sm-4 {
+  letter-spacing: 4px;
+  margin-top: 20px;
+}
+
+#sectionSpan {
+  background-color: #383639;
+}
+#sectionSpan #carouselExampleIndicators.carousel.slide {
+  margin-top: 200px;
+}
+
+section#AboutEurope {
+  background-color: #383639;
+  color: white;
+}
+section#AboutEurope .col-sm-12 {
+  padding: 5px 20px;
+}
+section#AboutEurope .col-sm-12 h5 {
+  letter-spacing: 5px;
+}
+
+section#SpanPortugal {
+  background-color: #383639;
+}
+section#SpanPortugal .col-sm-12 {
+  text-align: center;
+  color: #EADDDB;
+  padding: 60px;
+}
+section#SpanPortugal .span {
+  width: 100%;
+  height: 100%;
+}
+section#SpanPortugal .check {
+  transition: 0.5s;
+  margin-top: 30px;
+}
+section#SpanPortugal .check:before {
+  cursor: pointer;
+  content: "";
+  display: block;
+  background-color: #F4F4F4;
+  width: 97%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+section#SpanPortugal .check .text_part {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  left: -100px;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+section#SpanPortugal .check .text_part h1 {
+  font-size: 70px;
+}
+section#SpanPortugal .check:hover:before {
+  opacity: 0.3;
+}
+section#SpanPortugal .check:hover .text_part {
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#productPhoto {
+  padding: 120px;
+  background-color: #383639;
+  color: white;
+}
+#productPhoto .col-sm-12 h1 {
+  text-align: center;
+  color: #EADDDB;
+  margin-bottom: 50px;
+  padding: 10px 20px;
+}
+#productPhoto .col-sm-6 {
+  cursor: pointer;
+  transition: 0.5s;
+}
+#productPhoto .col-sm-6 .product1 {
+  overflow: hidden;
+}
+#productPhoto .col-sm-6 .product1:before {
+  content: " ";
+  display: block;
+  background-image: url("https://i.imgur.com/bd3DYrz.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  transition: 0.5s;
+}
+#productPhoto .col-sm-6 .product1:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+#productPhoto .col-sm-6 .product1:hover:after {
+  opacity: 1;
+  overflow: hidden;
+}
+#productPhoto .col-sm-6 .product1:hover:before {
+  transform: scale(1.1);
+}
+#productPhoto .col-sm-6 .product2 {
+  overflow: hidden;
+}
+#productPhoto .col-sm-6 .product2:before {
+  content: " ";
+  display: block;
+  background-image: url("https://i.imgur.com/nB0DKEU.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  transition: 0.5s;
+}
+#productPhoto .col-sm-6 .product2:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+#productPhoto .col-sm-6 .product2:hover:after {
+  opacity: 1;
+}
+#productPhoto .col-sm-6 .product2:hover:before {
+  transform: scale(1.1);
+}
+#productPhoto .col-sm-6 .product3:before {
+  content: " ";
+  display: block;
+  background-image: url("https://i.imgur.com/f7T8XXI.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 300px;
+  transition: 0.5s;
+}
+#productPhoto .col-sm-6 .product3:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+#productPhoto .col-sm-6 .product3:hover:after {
+  opacity: 1;
+}
+#productPhoto .col-sm-6 .product3:hover:before {
+  background-position: top;
+}
+#productPhoto .col-sm-6 .product4 {
+  overflow: hidden;
+}
+#productPhoto .col-sm-6 .product4:before {
+  content: " ";
+  display: block;
+  background-image: url("https://i.imgur.com/QArRQMG.jpg");
+  background-size: cover;
+  background-position: right;
+  width: 100%;
+  height: 300px;
+  transition: 0.5s;
+}
+#productPhoto .col-sm-6 .product4:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.5s;
+}
+#productPhoto .col-sm-6 .product4:hover:after {
+  opacity: 1;
+}
+#productPhoto .col-sm-6 .product4:hover:before {
+  transform: scale(1.1);
+}
+#productPhoto .col-sm-6 .text_area {
+  padding: 20px 0px;
+  font-size: 20px;
+}
+
+section#PortraitPhotograph {
+  background-color: #383639;
+  color: white;
+}
+section#PortraitPhotograph .second {
+  padding: 150px 0px;
+}
+section#PortraitPhotograph .col-sm-12 h1 {
+  text-align: center;
+  color: #EADDDB;
+  padding: 60px;
+}
+section#PortraitPhotograph .col-sm-6 .btn.btn-outline-primary.float-right {
+  transform: translateX(-30px);
+}
+section#PortraitPhotograph .col-sm-6 .text_head {
+  font-size: 80px;
+  padding-bottom: 20px;
+}
+section#PortraitPhotograph .col-sm-6 .Tara:before {
+  content: " ";
+  display: block;
+  background-image: url("https://i.imgur.com/AKUwiAK.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-width: 500px;
+  height: 500px;
+}
+section#PortraitPhotograph .col-sm-6 .Tara:after {
+  content: " ";
+  display: block;
+  background-image: url("https://i.imgur.com/Zc5KKeF.png");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  bottom: -50px;
+  right: -80px;
+  animation: floating 5s infinite;
+  animation-timing-function: ease-in-out;
+}
+section#PortraitPhotograph .col-sm-6 .Athlete:before {
+  content: " ";
+  display: block;
+  background-image: url("https://i.imgur.com/FkkTcbL.jpg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-width: 500px;
+  height: 500px;
+}
+section#PortraitPhotograph .col-sm-6 .Athlete:after {
+  content: " ";
+  display: block;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 150px;
+  position: absolute;
+  bottom: -50px;
+  right: -80px;
+}
+@keyframes floating {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+section#End:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  opacity: 0.4;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+section#End:after {
+  content: "";
+  background-image: url("https://i.imgur.com/ND8dI2Z.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+section#End .container {
+  padding: 150px 0px;
+  color: white;
+}
