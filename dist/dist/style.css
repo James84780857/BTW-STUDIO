@@ -1,0 +1,451 @@
+@charset "UTF-8";
+* {
+  font-family: "EB Garamond", "微軟正黑體";
+  position: relative;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.preloader {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  transition: 1s;
+  z-index: 4;
+}
+.preloader:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  transition: 0.5s;
+  left: 0;
+  background-color: #181A19;
+  transition: 1s;
+  cursor: pointer;
+}
+.preloader .loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 3px white;
+  width: 80px;
+  height: 50px;
+  animation: Ro 2s linear infinite;
+  transition: 0.5s;
+  border-radius: 5px;
+  background-color: #DEE2EC;
+  z-index: 1;
+}
+.preloader .loader:before {
+  content: "";
+  display: block;
+  top: -10px;
+  right: 10px;
+  background-color: white;
+  width: 20px;
+  height: 10px;
+  position: absolute;
+}
+.preloader .loader:after {
+  content: "";
+  display: block;
+  top: 50%;
+  left: 50%;
+  border-radius: 100px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border: solid 2px black;
+  position: absolute;
+}
+@keyframes Ro {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.preloader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  transition: 0.5s;
+  right: 0;
+  background-color: #181A19;
+  transition: 1s;
+}
+
+.re:before {
+  left: -50%;
+}
+.re:after {
+  right: -50%;
+}
+
+nav.navbar.navbar-expand-md.mb-4.fixed-top a.navbar-brand.ml-2 {
+  color: #FFDFD8;
+  transition: 0.5s;
+}
+nav.navbar.navbar-expand-md.mb-4.fixed-top a.navbar-brand.ml-2:hover {
+  opacity: 0.5;
+}
+
+ul.navbar-nav.ml-auto.mr-3 li.nav-item .ins {
+  width: 25px;
+  margin: 5px;
+}
+ul.navbar-nav.ml-auto.mr-3 li.nav-item .ins:hover {
+  cursor: pointer;
+}
+ul.navbar-nav.ml-auto.mr-3 li.nav-item a.nav-link {
+  color: #FFDFD8;
+  transition: 0.5s;
+}
+ul.navbar-nav.ml-auto.mr-3 li.nav-item a.nav-link:hover {
+  opacity: 0.5;
+}
+
+section {
+  padding: 20px 0px;
+  position: relative;
+}
+
+html, body {
+  height: 1000px;
+}
+
+.NavMove {
+  background-color: rgba(128, 128, 128, 0.5);
+  transition: 0.5s;
+}
+
+#headerfirst:before {
+  content: "";
+  background-color: black;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+#headerfirst:after {
+  content: "";
+  background-image: url("https://i.imgur.com/POZWxTx.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+#headerfirst .container {
+  padding: 250px 0px;
+  color: white;
+}
+#headerfirst .container .explore {
+  opacity: 0;
+}
+#headerfirst .container .ex {
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  cursor: pointer;
+  color: #F8F1FF;
+  transition: 0.3s;
+}
+#headerfirst .container .ex:hover {
+  color: #EADDDB;
+}
+#headerfirst .container .ex:after {
+  content: "∇";
+  display: block;
+  text-align: center;
+  animation: downward 0.5s infinite;
+  cursor: pointer;
+}
+@keyframes downward {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+#headerfirst .container .text_area {
+  padding-left: 40px;
+}
+#headerfirst .container .text_area .head {
+  font-size: 70px;
+}
+@media screen and (max-width: 700px) {
+  #headerfirst .container .text_area .head {
+    font-size: 70px;
+    text-align: center;
+  }
+}
+#headerfirst .container .text_area .text {
+  font-size: 30px;
+}
+@media screen and (max-width: 700px) {
+  #headerfirst .container .text_area .text {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+#sectionIntro {
+  background-color: #383639;
+  color: white;
+}
+#sectionIntro .personalpic {
+  width: 100%;
+  height: 100%;
+  padding-top: 20px;
+  margin-right: 80px;
+}
+@media screen and (max-width: 700px) {
+  #sectionIntro .personalpic {
+    width: 100%;
+    height: auto;
+  }
+}
+#sectionIntro .col-sm-12 .about {
+  padding: 10px 10px;
+  font-weight: 300;
+}
+#sectionIntro .col-sm-4 {
+  letter-spacing: 4px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 700px) {
+  #sectionIntro .col-sm-4 {
+    width: 100%;
+    height: auto;
+  }
+}
+
+#sectionSpan {
+  background-color: #383639;
+}
+#sectionSpan .col-sm-12 carouselExampleIndicators.carousel.slide {
+  padding: 100px 0px;
+}
+
+section#AboutEurope {
+  background-color: #383639;
+  color: white;
+}
+section#AboutEurope .col-sm-12 h5 {
+  letter-spacing: 5px;
+}
+
+section#SpanPortugal {
+  background-color: #383639;
+}
+section#SpanPortugal .col-sm-12 {
+  text-align: center;
+  color: #EADDDB;
+  padding: 60px 0px;
+}
+section#SpanPortugal .col-sm-6 {
+  overflow: hidden;
+}
+section#SpanPortugal .span {
+  width: 100%;
+  height: 100%;
+}
+section#SpanPortugal .check {
+  transition: 0.5s;
+  margin-top: 50px;
+}
+section#SpanPortugal .check:before {
+  cursor: pointer;
+  content: "";
+  display: block;
+  background-color: #F4F4F4;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  overflow: hidden;
+}
+section#SpanPortugal .check .text_part {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  left: -100px;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+section#SpanPortugal .check .text_part h1 {
+  font-size: 70px;
+}
+section#SpanPortugal .check:hover:before {
+  opacity: 0.3;
+}
+section#SpanPortugal .check:hover .text_part {
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#productphoto {
+  padding: 70px 0px;
+  background-color: #383639;
+  color: white;
+}
+#productphoto .row .col-sm-12 {
+  text-align: center;
+  color: #EADDDB;
+  margin-bottom: 50px;
+  padding: 10px 20px;
+}
+#productphoto .row .col-sm-4 {
+  cursor: pointer;
+  transition: 0.5s;
+  margin: 20px 0px;
+  cursor: pointer;
+  z-index: 10;
+}
+#productphoto .row .col-sm-4:hover .productname {
+  opacity: 1;
+  font-weight: 800;
+}
+#productphoto .row .col-sm-4:hover img {
+  transform: translateX(-10px);
+}
+#productphoto .row .col-sm-4 img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+#productphoto .row .col-sm-4 .productname {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  opacity: 0;
+  transition: 0.5s;
+  color: white;
+}
+#productphoto .pro1 img {
+  width: 100%;
+  height: 100%;
+}
+
+section#PortraitPhotograph {
+  background-color: #383639;
+  color: white;
+}
+section#PortraitPhotograph .row {
+  margin-top: 100px;
+}
+section#PortraitPhotograph .col-sm-12 h1 {
+  text-align: center;
+  color: #EADDDB;
+  padding: 60px;
+}
+section#PortraitPhotograph .col-sm-6 .btn.btn-outline-primary.float-right {
+  transform: translateX(-30px);
+  z-index: 15;
+}
+@media screen and (max-width: 700px) {
+  section#PortraitPhotograph .col-sm-6 .btn.btn-outline-primary.float-right {
+    transform: translateX(-80px);
+  }
+}
+section#PortraitPhotograph .col-sm-6 .btn.btn-outline-primary.float-left.btn-lg.Eson {
+  z-index: 15;
+}
+@media screen and (max-width: 700px) {
+  section#PortraitPhotograph .col-sm-6 .btn.btn-outline-primary.float-left.btn-lg.Eson {
+    transform: translateX(-80px);
+  }
+}
+section#PortraitPhotograph .col-sm-6 .text_head {
+  font-size: 80px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  section#PortraitPhotograph .col-sm-6 .text_head {
+    font-size: 40px;
+    padding: 20px;
+  }
+}
+section#PortraitPhotograph .col-sm-6 .Tara:before {
+  content: " ";
+  display: block;
+  background-image: url("https://i.imgur.com/AKUwiAK.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-width: 500px;
+  height: 500px;
+}
+section#PortraitPhotograph .col-sm-6 .eson:before {
+  content: " ";
+  display: block;
+  background-image: url("https://i.imgur.com/FkkTcbL.jpg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  max-width: 500px;
+  height: 500px;
+}
+@media screen and (max-width: 700px) {
+  section#PortraitPhotograph .col-sm-6 .eson:before {
+    margin-top: 20px;
+  }
+}
+
+section#End {
+  background-color: #EADDDB;
+  background-size: cover;
+  background-attachment: fixed;
+}
+section#End .container {
+  padding: 10px;
+  text-align: center;
+  color: black;
+}
+section#End .container .col-sm-12 {
+  padding: 15px;
+}
